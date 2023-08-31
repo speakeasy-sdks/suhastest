@@ -5,14 +5,12 @@ package sdkerrors
 import (
 	"encoding/json"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
-	"net/http"
 )
 
 // RateLimitError - Rate Limit Error
 type RateLimitError struct {
-	RawResponse *http.Response `json:"-"`
-	Code        *string        `json:"code,omitempty"`
-	Message     *string        `json:"message,omitempty"`
+	Code    *string `json:"code,omitempty"`
+	Message *string `json:"message,omitempty"`
 	// rate_limit_error
 	Type *shared.RateLimitErrorType `json:"type,omitempty"`
 }

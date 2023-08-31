@@ -5,14 +5,12 @@ package sdkerrors
 import (
 	"encoding/json"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
-	"net/http"
 )
 
 // APIError - API related Errors
 type APIError struct {
-	RawResponse *http.Response `json:"-"`
-	Code        *string        `json:"code,omitempty"`
-	Message     *string        `json:"message,omitempty"`
+	Code    *string `json:"code,omitempty"`
+	Message *string `json:"message,omitempty"`
 	// api_error
 	Type *shared.APIErrorType `json:"type,omitempty"`
 }

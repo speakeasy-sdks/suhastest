@@ -5,14 +5,12 @@ package sdkerrors
 import (
 	"encoding/json"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
-	"net/http"
 )
 
 // AuthenticationError - Authentication Error
 type AuthenticationError struct {
-	RawResponse *http.Response `json:"-"`
-	Code        *string        `json:"code,omitempty"`
-	Message     *string        `json:"message,omitempty"`
+	Code    *string `json:"code,omitempty"`
+	Message *string `json:"message,omitempty"`
 	// authentication_error
 	Type *shared.AuthenticationErrorType `json:"type,omitempty"`
 }

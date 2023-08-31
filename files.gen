@@ -70,3 +70,4 @@ docs/models/errors/authenticationerror.md
 docs/models/errors/ratelimiterror.md
 docs/models/errors/apierror.md
 docs/models/callbacks/createorderpaymentwebhookresponse.md
+.gitattributes
