@@ -51,36 +51,23 @@ func main() {
             OrderNote: suhas.String("Test order"),
             OrderSplits: []shared.VendorSplit{
                 shared.VendorSplit{
-                    Amount: suhas.Float64(3843.82),
-                    Percentage: suhas.Float64(4375.87),
-                    VendorID: suhas.String("magnam"),
-                },
-                shared.VendorSplit{
-                    Amount: suhas.Float64(8917.73),
-                    Percentage: suhas.Float64(567.13),
-                    VendorID: suhas.String("delectus"),
-                },
-                shared.VendorSplit{
-                    Amount: suhas.Float64(2726.56),
-                    Percentage: suhas.Float64(3834.41),
-                    VendorID: suhas.String("molestiae"),
+                    Amount: suhas.Float64(6458.94),
+                    Percentage: suhas.Float64(3843.82),
+                    VendorID: suhas.String("iure"),
                 },
             },
             OrderTags: map[string]string{
-                "placeat": "voluptatum",
-                "iusto": "excepturi",
-                "nisi": "recusandae",
-                "temporibus": "ab",
+                "magnam": "debitis",
             },
             Terminal: &shared.TerminalDetails{
-                TerminalID: "quis",
-                TerminalPhoneNo: "veritatis",
-                TerminalType: "deserunt",
+                TerminalID: "ipsa",
+                TerminalPhoneNo: "delectus",
+                TerminalType: "tempora",
             },
         },
-        XAPIVersion: suhas.String("perferendis"),
-        XClientID: "ipsam",
-        XClientSecret: "repellendus",
+        XAPIVersion: suhas.String("suscipit"),
+        XClientID: "molestiae",
+        XClientSecret: "minus",
     })
     if err != nil {
         log.Fatal(err)
