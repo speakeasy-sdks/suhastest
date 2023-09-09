@@ -7,7 +7,6 @@ import (
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 )
 
-// APIError - API related Errors
 type APIError struct {
 	Code    *string `json:"code,omitempty"`
 	Message *string `json:"message,omitempty"`
