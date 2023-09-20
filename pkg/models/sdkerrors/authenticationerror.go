@@ -4,14 +4,13 @@ package sdkerrors
 
 import (
 	"encoding/json"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 )
 
 type AuthenticationError struct {
 	Code    *string `json:"code,omitempty"`
 	Message *string `json:"message,omitempty"`
 	// authentication_error
-	Type *shared.AuthenticationErrorType `json:"type,omitempty"`
+	Type *string `const:"authentication_error" json:"type,omitempty"`
 }
 
 var _ error = &AuthenticationError{}

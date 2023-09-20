@@ -24,34 +24,34 @@ import(
 )
 
 func main() {
-    s := suhas.New()
+    s := suhastest.New()
 
     ctx := context.Background()
     res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
         CreateOrderBackendRequest: &shared.CreateOrderBackendRequest{
             CustomerDetails: shared.CustomerDetails{
-                CustomerBankAccountNumber: suhas.String("placeat"),
-                CustomerBankCode: suhas.String("voluptatum"),
-                CustomerBankIfsc: suhas.String("iusto"),
-                CustomerEmail: suhas.String("excepturi"),
+                CustomerBankAccountNumber: suhastest.String("placeat"),
+                CustomerBankCode: suhastest.String("voluptatum"),
+                CustomerBankIfsc: suhastest.String("iusto"),
+                CustomerEmail: suhastest.String("excepturi"),
                 CustomerID: "nisi",
                 CustomerPhone: "recusandae",
             },
             OrderAmount: 10.15,
             OrderCurrency: "INR",
-            OrderExpiryTime: suhas.String("2021-07-29T00:00:00Z"),
-            OrderID: suhas.String("temporibus"),
+            OrderExpiryTime: suhastest.String("2021-07-29T00:00:00Z"),
+            OrderID: suhastest.String("temporibus"),
             OrderMeta: &shared.OrderMeta{
-                NotifyURL: suhas.String("ab"),
-                PaymentMethods: suhas.String("quis"),
-                ReturnURL: suhas.String("veritatis"),
+                NotifyURL: suhastest.String("ab"),
+                PaymentMethods: suhastest.String("quis"),
+                ReturnURL: suhastest.String("veritatis"),
             },
-            OrderNote: suhas.String("Test order"),
+            OrderNote: suhastest.String("Test order"),
             OrderSplits: []shared.VendorSplit{
                 shared.VendorSplit{
-                    Amount: suhas.Float64(6481.72),
-                    Percentage: suhas.Float64(202.18),
-                    VendorID: suhas.String("ipsam"),
+                    Amount: suhastest.Float64(6481.72),
+                    Percentage: suhastest.Float64(202.18),
+                    VendorID: suhastest.String("ipsam"),
                 },
             },
             OrderTags: map[string]string{
@@ -63,7 +63,7 @@ func main() {
                 TerminalType: "at",
             },
         },
-        XAPIVersion: suhas.String("at"),
+        XAPIVersion: suhastest.String("at"),
         XClientID: "maiores",
         XClientSecret: "molestiae",
     })
