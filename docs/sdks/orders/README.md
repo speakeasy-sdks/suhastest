@@ -30,42 +30,42 @@ func main() {
     res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
         CreateOrderBackendRequest: &shared.CreateOrderBackendRequest{
             CustomerDetails: shared.CustomerDetails{
-                CustomerBankAccountNumber: suhastest.String("placeat"),
-                CustomerBankCode: suhastest.String("voluptatum"),
-                CustomerBankIfsc: suhastest.String("iusto"),
-                CustomerEmail: suhastest.String("excepturi"),
-                CustomerID: "nisi",
-                CustomerPhone: "recusandae",
+                CustomerBankAccountNumber: suhastest.String("quod"),
+                CustomerBankCode: suhastest.String("quod"),
+                CustomerBankIfsc: suhastest.String("esse"),
+                CustomerEmail: suhastest.String("totam"),
+                CustomerID: "porro",
+                CustomerPhone: "dolorum",
             },
             OrderAmount: 10.15,
             OrderCurrency: "INR",
             OrderExpiryTime: suhastest.String("2021-07-29T00:00:00Z"),
-            OrderID: suhastest.String("temporibus"),
+            OrderID: suhastest.String("dicta"),
             OrderMeta: &shared.OrderMeta{
-                NotifyURL: suhastest.String("ab"),
-                PaymentMethods: suhastest.String("quis"),
-                ReturnURL: suhastest.String("veritatis"),
+                NotifyURL: suhastest.String("nam"),
+                PaymentMethods: suhastest.String("officia"),
+                ReturnURL: suhastest.String("occaecati"),
             },
             OrderNote: suhastest.String("Test order"),
             OrderSplits: []shared.VendorSplit{
                 shared.VendorSplit{
-                    Amount: suhastest.Float64(6481.72),
-                    Percentage: suhastest.Float64(202.18),
-                    VendorID: suhastest.String("ipsam"),
+                    Amount: suhastest.Float64(1433.53),
+                    Percentage: suhastest.Float64(5373.73),
+                    VendorID: suhastest.String("hic"),
                 },
             },
             OrderTags: map[string]string{
-                "repellendus": "sapiente",
+                "optio": "totam",
             },
             Terminal: &shared.TerminalDetails{
-                TerminalID: "quo",
-                TerminalPhoneNo: "odit",
-                TerminalType: "at",
+                TerminalID: "beatae",
+                TerminalPhoneNo: "commodi",
+                TerminalType: "molestiae",
             },
         },
-        XAPIVersion: suhastest.String("at"),
-        XClientID: "maiores",
-        XClientSecret: "molestiae",
+        XAPIVersion: suhastest.String("modi"),
+        XClientID: "qui",
+        XClientSecret: "impedit",
     })
     if err != nil {
         log.Fatal(err)
