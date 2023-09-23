@@ -117,8 +117,8 @@ func New(opts ...SDKOption) *Suhas {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "2022-09-01",
-			SDKVersion:        "0.4.1",
-			GenVersion:        "2.118.1",
+			SDKVersion:        "0.4.2",
+			GenVersion:        "2.125.1",
 		},
 	}
 	for _, opt := range opts {
