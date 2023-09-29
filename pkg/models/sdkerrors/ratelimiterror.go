@@ -4,6 +4,7 @@ package sdkerrors
 
 import (
 	"encoding/json"
+	"github.com/speakeasy-sdks/suhastest/pkg/types"
 )
 
 type RateLimitError struct {

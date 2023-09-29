@@ -50,6 +50,7 @@ type sdkConfiguration struct {
 	OpenAPIDocVersion string
 	SDKVersion        string
 	GenVersion        string
+	UserAgent         string
 	RetryConfig       *utils.RetryConfig
 }
 
@@ -104,6 +105,11 @@ func WithClient(client HTTPClient) SDKOption {
 		sdk.sdkConfiguration.DefaultClient = client
 	}
 }
+func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
+	return func(context.Context) (interface{}, error) {
+		return &security, nil
+	}
+}
 
 func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
 	return func(sdk *Suhas) {
@@ -117,8 +123,9 @@ func New(opts ...SDKOption) *Suhas {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "2022-09-01",
-			SDKVersion:        "0.4.1",
-			GenVersion:        "2.118.1",
+			SDKVersion:        "0.5.0",
+			GenVersion:        "2.139.1",
+			UserAgent:         "speakeasy-sdk/go 0.5.0 2.139.1 2022-09-01 github.com/speakeasy-sdks/suhastest",
 		},
 	}
 	for _, opt := range opts {
