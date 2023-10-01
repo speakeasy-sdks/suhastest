@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 90f957c86d6a7abe8ba1c3727d59b7be
   docVersion: "2022-09-01"
-  speakeasyVersion: 1.88.0
-  generationVersion: 2.118.1
+  speakeasyVersion: 1.92.2
+  generationVersion: 2.142.2
 generation:
   comments:
     disableComments: false
@@ -15,10 +15,10 @@ generation:
 features:
   go:
     constsAndDefaults: 0.1.0
-    core: 2.88.3
+    core: 2.91.0
     globalServerURLs: 2.82.0
 go:
-  version: 0.4.1
+  version: 0.5.0
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
   packageName: github.com/speakeasy-sdks/suhastest
