@@ -1,4 +1,5 @@
 # Orders
+(*Orders*)
 
 ### Available Operations
 
@@ -30,42 +31,42 @@ func main() {
     res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
         CreateOrderBackendRequest: &shared.CreateOrderBackendRequest{
             CustomerDetails: shared.CustomerDetails{
-                CustomerBankAccountNumber: suhastest.String("placeat"),
-                CustomerBankCode: suhastest.String("voluptatum"),
-                CustomerBankIfsc: suhastest.String("iusto"),
-                CustomerEmail: suhastest.String("excepturi"),
-                CustomerID: "nisi",
-                CustomerPhone: "recusandae",
+                CustomerBankAccountNumber: suhastest.String("North double"),
+                CustomerBankCode: suhastest.String("spherical woman burdensome"),
+                CustomerBankIfsc: suhastest.String("interfaces Smart"),
+                CustomerEmail: suhastest.String("Doyle brown toast"),
+                CustomerID: "Bedfordshire",
+                CustomerPhone: "Mohr North",
             },
             OrderAmount: 10.15,
             OrderCurrency: "INR",
             OrderExpiryTime: suhastest.String("2021-07-29T00:00:00Z"),
-            OrderID: suhastest.String("temporibus"),
+            OrderID: suhastest.String("deploy South"),
             OrderMeta: &shared.OrderMeta{
-                NotifyURL: suhastest.String("ab"),
-                PaymentMethods: suhastest.String("quis"),
-                ReturnURL: suhastest.String("veritatis"),
+                NotifyURL: suhastest.String("Road male Berkshire"),
+                PaymentMethods: suhastest.String("parsing female middleware"),
+                ReturnURL: suhastest.String("Bedfordshire navigating"),
             },
             OrderNote: suhastest.String("Test order"),
             OrderSplits: []shared.VendorSplit{
                 shared.VendorSplit{
-                    Amount: suhastest.Float64(6481.72),
-                    Percentage: suhastest.Float64(202.18),
-                    VendorID: suhastest.String("ipsam"),
+                    Amount: suhastest.Float64(5942.72),
+                    Percentage: suhastest.Float64(3302.96),
+                    VendorID: suhastest.String("dearly remount"),
                 },
             },
             OrderTags: map[string]string{
-                "repellendus": "sapiente",
+                "expedita": "South",
             },
             Terminal: &shared.TerminalDetails{
-                TerminalID: "quo",
-                TerminalPhoneNo: "odit",
-                TerminalType: "at",
+                TerminalID: "Southwest",
+                TerminalPhoneNo: "violet Chips Porsche",
+                TerminalType: "mobile",
             },
         },
-        XAPIVersion: suhastest.String("at"),
-        XClientID: "maiores",
-        XClientSecret: "molestiae",
+        XAPIVersion: suhastest.String("ROI bypassing vero"),
+        XClientID: "Solutions Ferrari Accountability",
+        XClientSecret: "Folk ampere",
     })
     if err != nil {
         log.Fatal(err)
