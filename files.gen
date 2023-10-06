@@ -7,6 +7,7 @@ pkg/types/bigint.go
 pkg/types/date.go
 pkg/types/datetime.go
 pkg/types/decimal.go
+pkg/types/pointers.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -25,6 +26,9 @@ pkg/models/shared/paymenturlobject.go
 pkg/models/shared/ordermeta.go
 pkg/models/shared/customerdetails.go
 pkg/models/shared/errorresponse.go
+pkg/models/shared/authenticationerror.go
+pkg/models/shared/ratelimiterror.go
+pkg/models/shared/apierror.go
 pkg/models/shared/createorderbackendrequest.go
 pkg/models/shared/terminaldetails.go
 pkg/models/shared/vendorsplit.go
@@ -39,8 +43,6 @@ pkg/models/sdkerrors/authenticationerror.go
 pkg/models/sdkerrors/ratelimiterror.go
 pkg/models/sdkerrors/apierror.go
 pkg/models/callbacks/createorder.go
-docs/sdks/suhas/README.md
-docs/sdks/orders/README.md
 USAGE.md
 docs/models/operations/createorderrequest.md
 docs/models/operations/createorderresponse.md
@@ -52,6 +54,9 @@ docs/models/shared/ordermeta.md
 docs/models/shared/customerdetails.md
 docs/models/shared/errorresponsetype.md
 docs/models/shared/errorresponse.md
+docs/models/shared/authenticationerrortype.md
+docs/models/shared/ratelimiterrortype.md
+docs/models/shared/apierrortype.md
 docs/models/shared/createorderbackendrequest.md
 docs/models/shared/terminaldetails.md
 docs/models/shared/vendorsplit.md
@@ -66,4 +71,6 @@ docs/models/errors/authenticationerror.md
 docs/models/errors/ratelimiterror.md
 docs/models/errors/apierror.md
 docs/models/callbacks/createorderpaymentwebhookresponse.md
+docs/sdks/suhas/README.md
+docs/sdks/orders/README.md
 .gitattributes
