@@ -10,8 +10,6 @@ go get github.com/speakeasy-sdks/suhastest
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
@@ -22,7 +20,6 @@ import(
 	"github.com/speakeasy-sdks/suhastest/pkg/models/operations"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/callbacks"
-	"net/http"
 )
 
 func main() {
@@ -32,42 +29,28 @@ func main() {
     res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
         CreateOrderBackendRequest: &shared.CreateOrderBackendRequest{
             CustomerDetails: shared.CustomerDetails{
-                CustomerBankAccountNumber: suhastest.String("corrupti"),
-                CustomerBankCode: suhastest.String("provident"),
-                CustomerBankIfsc: suhastest.String("distinctio"),
-                CustomerEmail: suhastest.String("quibusdam"),
-                CustomerID: "unde",
-                CustomerPhone: "nulla",
+                CustomerID: "North double",
+                CustomerPhone: "spherical woman burdensome",
             },
             OrderAmount: 10.15,
             OrderCurrency: "INR",
             OrderExpiryTime: suhastest.String("2021-07-29T00:00:00Z"),
-            OrderID: suhastest.String("corrupti"),
-            OrderMeta: &shared.OrderMeta{
-                NotifyURL: suhastest.String("illum"),
-                PaymentMethods: suhastest.String("vel"),
-                ReturnURL: suhastest.String("error"),
-            },
+            OrderMeta: &shared.OrderMeta{},
             OrderNote: suhastest.String("Test order"),
             OrderSplits: []shared.VendorSplit{
-                shared.VendorSplit{
-                    Amount: suhastest.Float64(6458.94),
-                    Percentage: suhastest.Float64(3843.82),
-                    VendorID: suhastest.String("iure"),
-                },
+                shared.VendorSplit{},
             },
             OrderTags: map[string]string{
-                "magnam": "debitis",
+                "temporibus": "SUV",
             },
             Terminal: &shared.TerminalDetails{
-                TerminalID: "ipsa",
-                TerminalPhoneNo: "delectus",
-                TerminalType: "tempora",
+                TerminalID: "overriding",
+                TerminalPhoneNo: "Southeast Southwest but",
+                TerminalType: "Recycled",
             },
         },
-        XAPIVersion: suhastest.String("suscipit"),
-        XClientID: "molestiae",
-        XClientSecret: "minus",
+        XClientID: "Orchestrator",
+        XClientSecret: "implement",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,6 +71,38 @@ func main() {
 
 * [CreateOrder](docs/sdks/orders/README.md#createorder) - Create Order
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `nil`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+
+
+<!-- Start Go Types -->
+
+<!-- End Go Types -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
