@@ -4,14 +4,39 @@ package sdkerrors
 
 import (
 	"encoding/json"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
+	"fmt"
 )
+
+// AuthenticationErrorType - authentication_error
+type AuthenticationErrorType string
+
+const (
+	AuthenticationErrorTypeAuthenticationError AuthenticationErrorType = "authentication_error"
+)
+
+func (e AuthenticationErrorType) ToPointer() *AuthenticationErrorType {
+	return &e
+}
+
+func (e *AuthenticationErrorType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "authentication_error":
+		*e = AuthenticationErrorType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AuthenticationErrorType: %v", v)
+	}
+}
 
 type AuthenticationError struct {
 	Code    *string `json:"code,omitempty"`
 	Message *string `json:"message,omitempty"`
 	// authentication_error
-	Type *shared.AuthenticationErrorType `json:"type,omitempty"`
+	Type *AuthenticationErrorType `json:"type,omitempty"`
 }
 
 var _ error = &AuthenticationError{}

@@ -4,14 +4,39 @@ package sdkerrors
 
 import (
 	"encoding/json"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
+	"fmt"
 )
+
+// APIErrorType - api_error
+type APIErrorType string
+
+const (
+	APIErrorTypeAPIError APIErrorType = "api_error"
+)
+
+func (e APIErrorType) ToPointer() *APIErrorType {
+	return &e
+}
+
+func (e *APIErrorType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "api_error":
+		*e = APIErrorType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for APIErrorType: %v", v)
+	}
+}
 
 type APIError struct {
 	Code    *string `json:"code,omitempty"`
 	Message *string `json:"message,omitempty"`
 	// api_error
-	Type *shared.APIErrorType `json:"type,omitempty"`
+	Type *APIErrorType `json:"type,omitempty"`
 }
 
 var _ error = &APIError{}

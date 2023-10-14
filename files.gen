@@ -27,9 +27,6 @@ pkg/models/shared/paymenturlobject.go
 pkg/models/shared/ordermeta.go
 pkg/models/shared/customerdetails.go
 pkg/models/shared/errorresponse.go
-pkg/models/shared/authenticationerror.go
-pkg/models/shared/ratelimiterror.go
-pkg/models/shared/apierror.go
 pkg/models/shared/createorderbackendrequest.go
 pkg/models/shared/terminaldetails.go
 pkg/models/shared/vendorsplit.go
@@ -55,9 +52,6 @@ docs/models/shared/ordermeta.md
 docs/models/shared/customerdetails.md
 docs/models/shared/errorresponsetype.md
 docs/models/shared/errorresponse.md
-docs/models/shared/authenticationerrortype.md
-docs/models/shared/ratelimiterrortype.md
-docs/models/shared/apierrortype.md
 docs/models/shared/createorderbackendrequest.md
 docs/models/shared/terminaldetails.md
 docs/models/shared/vendorsplit.md
@@ -68,8 +62,11 @@ docs/models/shared/whpaymentmethod.md
 docs/models/shared/whcard.md
 docs/models/shared/whorder.md
 docs/models/shared/whcustomerdetails.md
+docs/models/errors/authenticationerrortype.md
 docs/models/errors/authenticationerror.md
+docs/models/errors/ratelimiterrortype.md
 docs/models/errors/ratelimiterror.md
+docs/models/errors/apierrortype.md
 docs/models/errors/apierror.md
 docs/models/callbacks/createorderpaymentwebhookresponse.md
 docs/sdks/suhas/README.md
