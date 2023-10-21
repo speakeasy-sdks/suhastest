@@ -118,9 +118,9 @@ func New(opts ...SDKOption) *Suhas {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "2022-09-01",
-			SDKVersion:        "0.5.1",
-			GenVersion:        "2.155.1",
-			UserAgent:         "speakeasy-sdk/go 0.5.1 2.155.1 2022-09-01 github.com/speakeasy-sdks/suhastest",
+			SDKVersion:        "0.6.0",
+			GenVersion:        "2.169.0",
+			UserAgent:         "speakeasy-sdk/go 0.6.0 2.169.0 2022-09-01 github.com/speakeasy-sdks/suhastest",
 		},
 	}
 	for _, opt := range opts {

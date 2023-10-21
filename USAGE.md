@@ -20,8 +20,8 @@ func main() {
 	res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
 		CreateOrderBackendRequest: &shared.CreateOrderBackendRequest{
 			CustomerDetails: shared.CustomerDetails{
-				CustomerID:    "North double",
-				CustomerPhone: "spherical woman burdensome",
+				CustomerID:    "string",
+				CustomerPhone: "string",
 			},
 			OrderAmount:     10.15,
 			OrderCurrency:   "INR",
@@ -32,16 +32,16 @@ func main() {
 				shared.VendorSplit{},
 			},
 			OrderTags: map[string]string{
-				"temporibus": "SUV",
+				"key": "string",
 			},
 			Terminal: &shared.TerminalDetails{
-				TerminalID:      "overriding",
-				TerminalPhoneNo: "Southeast Southwest but",
-				TerminalType:    "Recycled",
+				TerminalID:      "string",
+				TerminalPhoneNo: "string",
+				TerminalType:    "string",
 			},
 		},
-		XClientID:     "Orchestrator",
-		XClientSecret: "implement",
+		XClientID:     "string",
+		XClientSecret: "string",
 	})
 	if err != nil {
 		log.Fatal(err)
