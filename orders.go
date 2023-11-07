@@ -15,19 +15,19 @@ import (
 	"strings"
 )
 
-type orders struct {
+type Orders struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newOrders(sdkConfig sdkConfiguration) *orders {
-	return &orders{
+func newOrders(sdkConfig sdkConfiguration) *Orders {
+	return &Orders{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateOrder - Create Order
 // Use this API to create orders with Cashfree from your backend and get the payment link. To use this API S2S flag needs to be enabled from the backend. In case you want to use the cards payment option the PCI DSS flag is required, for more information email us at "care@cashfree.com".
-func (s *orders) CreateOrder(ctx context.Context, request operations.CreateOrderRequest) (*operations.CreateOrderResponse, error) {
+func (s *Orders) CreateOrder(ctx context.Context, request operations.CreateOrderRequest) (*operations.CreateOrderResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/orders"
 

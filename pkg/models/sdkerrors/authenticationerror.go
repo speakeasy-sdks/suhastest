@@ -7,28 +7,28 @@ import (
 	"fmt"
 )
 
-// AuthenticationErrorType - authentication_error
-type AuthenticationErrorType string
+// SchemasType - authentication_error
+type SchemasType string
 
 const (
-	AuthenticationErrorTypeAuthenticationError AuthenticationErrorType = "authentication_error"
+	SchemasTypeAuthenticationError SchemasType = "authentication_error"
 )
 
-func (e AuthenticationErrorType) ToPointer() *AuthenticationErrorType {
+func (e SchemasType) ToPointer() *SchemasType {
 	return &e
 }
 
-func (e *AuthenticationErrorType) UnmarshalJSON(data []byte) error {
+func (e *SchemasType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
 	switch v {
 	case "authentication_error":
-		*e = AuthenticationErrorType(v)
+		*e = SchemasType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthenticationErrorType: %v", v)
+		return fmt.Errorf("invalid value for SchemasType: %v", v)
 	}
 }
 
@@ -36,7 +36,7 @@ type AuthenticationError struct {
 	Code    *string `json:"code,omitempty"`
 	Message *string `json:"message,omitempty"`
 	// authentication_error
-	Type *AuthenticationErrorType `json:"type,omitempty"`
+	Type *SchemasType `json:"type,omitempty"`
 }
 
 var _ error = &AuthenticationError{}

@@ -7,28 +7,28 @@ import (
 	"fmt"
 )
 
-// APIErrorType - api_error
-type APIErrorType string
+// Type - api_error
+type Type string
 
 const (
-	APIErrorTypeAPIError APIErrorType = "api_error"
+	TypeAPIError Type = "api_error"
 )
 
-func (e APIErrorType) ToPointer() *APIErrorType {
+func (e Type) ToPointer() *Type {
 	return &e
 }
 
-func (e *APIErrorType) UnmarshalJSON(data []byte) error {
+func (e *Type) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
 	switch v {
 	case "api_error":
-		*e = APIErrorType(v)
+		*e = Type(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIErrorType: %v", v)
+		return fmt.Errorf("invalid value for Type: %v", v)
 	}
 }
 
@@ -36,7 +36,7 @@ type APIError struct {
 	Code    *string `json:"code,omitempty"`
 	Message *string `json:"message,omitempty"`
 	// api_error
-	Type *APIErrorType `json:"type,omitempty"`
+	Type *Type `json:"type,omitempty"`
 }
 
 var _ error = &APIError{}
