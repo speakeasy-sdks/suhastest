@@ -1,13 +1,10 @@
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
 import (
 	"context"
 	"github.com/speakeasy-sdks/suhastest"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/callbacks"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/operations"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 	"log"

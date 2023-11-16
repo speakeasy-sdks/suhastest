@@ -10,13 +10,14 @@ go get github.com/speakeasy-sdks/suhastest
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```go
 package main
 
 import (
 	"context"
 	"github.com/speakeasy-sdks/suhastest"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/callbacks"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/operations"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 	"log"
@@ -102,7 +103,7 @@ Here's an example of one such pagination call:
 
 
 <!-- Start Error Handling -->
-# Error Handling
+## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
 
@@ -113,17 +114,17 @@ Handling errors in this SDK should largely match your expectations.  All operati
 | sdkerrors.APIError            | 500                           | application/json              |
 | sdkerrors.SDKError            | 400-600                       | */*                           |
 
-
-## Example
+### Example
 
 ```go
 package main
 
 import (
 	"context"
+	"errors"
 	"github.com/speakeasy-sdks/suhastest"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/callbacks"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/operations"
+	"github.com/speakeasy-sdks/suhastest/pkg/models/sdkerrors"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 	"log"
 )
@@ -192,9 +193,9 @@ func main() {
 
 
 <!-- Start Server Selection -->
-# Server Selection
+## Server Selection
 
-## Select Server by Index
+### Select Server by Index
 
 You can override the default server globally using the `WithServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
@@ -203,7 +204,7 @@ You can override the default server globally using the `WithServerIndex` option 
 | 0 | `https://sandbox.cashfree.com/pg` | None |
 | 1 | `https://api.cashfree.com/pg` | None |
 
-For example:
+#### Example
 
 ```go
 package main
@@ -211,7 +212,6 @@ package main
 import (
 	"context"
 	"github.com/speakeasy-sdks/suhastest"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/callbacks"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/operations"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 	"log"
@@ -261,17 +261,15 @@ func main() {
 ```
 
 
-## Override Server URL Per-Client
+### Override Server URL Per-Client
 
 The default server can also be overridden globally using the `WithServerURL` option when initializing the SDK client instance. For example:
-
 ```go
 package main
 
 import (
 	"context"
 	"github.com/speakeasy-sdks/suhastest"
-	"github.com/speakeasy-sdks/suhastest/pkg/models/callbacks"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/operations"
 	"github.com/speakeasy-sdks/suhastest/pkg/models/shared"
 	"log"
@@ -324,7 +322,7 @@ func main() {
 
 
 <!-- Start Custom HTTP Client -->
-# Custom HTTP Client
+## Custom HTTP Client
 
 The Go SDK makes API calls that wrap an internal HTTP client. The requirements for the HTTP client are very simple. It must match this interface:
 
