@@ -2,21 +2,23 @@ configVersion: 1.0.0
 management:
   docChecksum: 90f957c86d6a7abe8ba1c3727d59b7be
   docVersion: "2022-09-01"
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+  speakeasyVersion: 1.127.0
+  generationVersion: 2.220.0
 generation:
   comments: {}
   sdkClassName: Suhas
   repoURL: https://github.com/speakeasy-sdks/suhastest.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
 features:
   go:
     constsAndDefaults: 0.1.2
-    core: 3.2.0
+    core: 3.2.2
     globalServerURLs: 2.82.1
 go:
-  version: 0.8.0
+  version: 0.8.1
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
