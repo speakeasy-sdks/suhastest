@@ -179,3 +179,13 @@ Based on:
 - [go v0.8.2] .
 ### Releases
 - [Go v0.8.2] https://github.com/speakeasy-sdks/suhastest/releases/tag/v0.8.2 - .
+
+## 2024-02-06 00:52:38
+### Changes
+Based on:
+- OpenAPI Doc 2022-09-01 
+- Speakeasy CLI 1.167.3 (2.250.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.9.0] .
+### Releases
+- [Go v0.9.0] https://github.com/speakeasy-sdks/suhastest/releases/tag/v0.9.0 - .
