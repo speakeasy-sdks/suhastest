@@ -4,9 +4,9 @@ management:
   docChecksum: 90f957c86d6a7abe8ba1c3727d59b7be
   docVersion: "2022-09-01"
   speakeasyVersion: internal
-  generationVersion: 2.250.2
-  releaseVersion: 0.9.0
-  configChecksum: 9fc1a1bf75855d3aef626e4c8d8fb8ad
+  generationVersion: 2.253.0
+  releaseVersion: 0.9.1
+  configChecksum: 82cdff025f1929fb77dd1f1d1aededb4
   repoURL: https://github.com/speakeasy-sdks/suhastest.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/suhastest
