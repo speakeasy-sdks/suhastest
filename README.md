@@ -28,8 +28,8 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
-		XClientID:     "string",
-		XClientSecret: "string",
+		XClientID:     "<value>",
+		XClientSecret: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -96,8 +96,8 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
-		XClientID:     "string",
-		XClientSecret: "string",
+		XClientID:     "<value>",
+		XClientSecret: "<value>",
 	})
 	if err != nil {
 
@@ -163,8 +163,8 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
-		XClientID:     "string",
-		XClientSecret: "string",
+		XClientID:     "<value>",
+		XClientSecret: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -198,8 +198,8 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Orders.CreateOrder(ctx, operations.CreateOrderRequest{
-		XClientID:     "string",
-		XClientSecret: "string",
+		XClientID:     "<value>",
+		XClientSecret: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)

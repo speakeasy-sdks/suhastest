@@ -4,6 +4,7 @@ package suhastest
 
 import (
 	"fmt"
+	"github.com/speakeasy-sdks/suhastest/internal/hooks"
 	"github.com/speakeasy-sdks/suhastest/pkg/utils"
 	"net/http"
 	"time"
@@ -52,6 +53,7 @@ type sdkConfiguration struct {
 	GenVersion        string
 	UserAgent         string
 	RetryConfig       *utils.RetryConfig
+	Hooks             *hooks.Hooks
 }
 
 func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
@@ -118,14 +120,17 @@ func New(opts ...SDKOption) *Suhas {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "2022-09-01",
-			SDKVersion:        "0.9.1",
-			GenVersion:        "2.253.0",
-			UserAgent:         "speakeasy-sdk/go 0.9.1 2.253.0 2022-09-01 github.com/speakeasy-sdks/suhastest",
+			SDKVersion:        "0.10.0",
+			GenVersion:        "2.258.2",
+			UserAgent:         "speakeasy-sdk/go 0.10.0 2.258.2 2022-09-01 github.com/speakeasy-sdks/suhastest",
+			Hooks:             hooks.New(),
 		},
 	}
 	for _, opt := range opts {
 		opt(sdk)
 	}
+
+	sdk.sdkConfiguration.DefaultClient = sdk.sdkConfiguration.Hooks.ClientInit(sdk.sdkConfiguration.DefaultClient)
 
 	// Use WithClient to override the default client if you would like to customize the timeout
 	if sdk.sdkConfiguration.DefaultClient == nil {

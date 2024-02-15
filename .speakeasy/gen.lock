@@ -4,9 +4,9 @@ management:
   docChecksum: 90f957c86d6a7abe8ba1c3727d59b7be
   docVersion: "2022-09-01"
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.9.1
-  configChecksum: 82cdff025f1929fb77dd1f1d1aededb4
+  generationVersion: 2.258.2
+  releaseVersion: 0.10.0
+  configChecksum: cee73e5a3fd74e49ad10b3cbed4c8500
   repoURL: https://github.com/speakeasy-sdks/suhastest.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/suhastest
@@ -14,7 +14,7 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.3
-    core: 3.3.2
+    core: 3.4.0
     globalServerURLs: 2.82.1
 generatedFiles:
   - orders.go
@@ -90,3 +90,4 @@ generatedFiles:
   - docs/sdks/orders/README.md
   - USAGE.md
   - .gitattributes
+  - internal/hooks/hooks.go
