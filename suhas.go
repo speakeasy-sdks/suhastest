@@ -120,9 +120,9 @@ func New(opts ...SDKOption) *Suhas {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "2022-09-01",
-			SDKVersion:        "0.11.0",
-			GenVersion:        "2.275.4",
-			UserAgent:         "speakeasy-sdk/go 0.11.0 2.275.4 2022-09-01 github.com/speakeasy-sdks/suhastest",
+			SDKVersion:        "0.11.1",
+			GenVersion:        "2.277.0",
+			UserAgent:         "speakeasy-sdk/go 0.11.1 2.277.0 2022-09-01 github.com/speakeasy-sdks/suhastest",
 			Hooks:             hooks.New(),
 		},
 	}
